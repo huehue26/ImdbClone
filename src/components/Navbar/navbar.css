@@ -1,0 +1,97 @@
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --secondary-color: rgba(229, 148, 0, 0.9);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
+}
+
+/* nav-bar */
+#nav-bar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    justify-content: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    transition: all 0.5s;
+    transition-timing-function: ease-in;
+    background-image: linear-gradient(black, transparent);
+    z-index: 10;
+}
+
+#nav-bar .nav-bar-links {
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(25, 46, 73);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#nav-bar .nav-bar-links:hover {
+    color: rgb(165, 70, 46)
+}
+
+#nav-bar .nav-bar-heading {
+    font-size: 14px;
+}
+
+#nav-bar .logo {
+    height: 30px;
+    padding-right: 40px;
+}
+
+#nav-bar .menu {
+    font-size: 19px;
+}
+
+#nav-bar .search {
+    margin-left: 13px;
+    margin-bottom: 13px;
+    margin-top: 13px;
+    width: 700px;
+    padding-left: 13px;
+    height: 23px;
+    text-align: left;
+    font-size: 15px;
+    border: none;
+}
+
+#nav-bar #form button {
+    background-color: transparent;
+    border: none;
+    margin-right: 30px;
+    color: black;
+    background-color: white;
+    height: 25px;
+    cursor: pointer;
+}
+
+#nav-bar #form button:hover {
+    color: rgb(190, 126, 7);
+}
+
+#nav-bar .btn-1 {
+    cursor: pointer;
+    margin-left: 10px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 4px 7px;
+}
+
+#nav-bar .WatchList {
+    font-size: 17px;
+}
+
+#nav-bar .sign-in {
+    font-size: 17px;
+}
+
+#nav-bar .btn-1:hover {
+    color: rgba(245, 178, 53, 0.9);
+}

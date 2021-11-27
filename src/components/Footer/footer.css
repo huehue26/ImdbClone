@@ -1,0 +1,89 @@
+/* footer */
+footer {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+footer h1,
+h3,
+P {
+    color: white;
+}
+
+footer .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 60vw;
+    margin: auto;
+    position: relative;
+}
+
+footer .iconscolor {
+    color: white;
+    font-size: 25px;
+    margin: 25px;
+}
+
+footer .iconscolor:hover {
+    color: rgb(223, 146, 59);
+}
+
+footer .first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 80vw;
+    margin: auto;
+    position: relative;
+}
+
+footer .main {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+footer .second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 80vw;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a div {
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+}
+
+footer a:hover {
+    color: rgb(223, 146, 59);
+}
+
+footer .first a:visited,
+.second a:visited {
+    border: 1px dashed white;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer .main .cc {
+    font-size: 13px;
+}

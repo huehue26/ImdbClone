@@ -1,0 +1,65 @@
+.search-items {
+    margin-top: 100px;
+    margin-left: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.search-items .scroll-carousel-items {
+    height: 370px;
+    width: 173px;
+    background-color: rgb(54, 53, 53);
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.search-items .scroll-carousel-items .image img {
+    height: 260px;
+    width: 173px;
+    border-radius: 5px;
+}
+
+.search-items .scroll-carousel-items .details {
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    color: white;
+}
+
+.search-items .scroll-carousel-items .details .heading {
+    padding-left: 5px;
+    width: 100%;
+}
+
+.search-items .scroll-carousel-items .details .rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-items .scroll-carousel-items .details .rating .fas {
+    font-size: 13px;
+    color: rgb(243, 199, 55);
+    margin-right: 2px;
+}
+
+.search-items .scroll-carousel-items .details .rating div {
+    font-size: 17px;
+    margin: 6px 5px;
+}
+
+.search-items .scroll-carousel-items .details .rating div button {
+    height: 29px;
+    width: 35px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+.search-items .scroll-carousel-items .details .rating div button:hover {
+    background-color: rgb(73, 72, 72);
+}

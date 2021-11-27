@@ -1,0 +1,240 @@
+.info-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: white;
+    width: 85vw;
+    margin-left: 7.5vw;
+}
+
+.info-container .top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.info-container .top .name {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container .top .name .heading {
+    font-size: 35px;
+    color: rgb(223, 219, 219);
+    margin-bottom: 10px;
+}
+
+.info-container .top .name .release span {
+    padding-left: 30px;
+}
+
+.info-container .top .rate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.info-container .top .rate .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-container .top .rate .value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.info-container .top .rate .value:hover {
+    background-color: rgb(80, 79, 79);
+}
+
+.info-container .top .rate .rating span {
+    font-size: 17px;
+    padding-left: 3px;
+    color: rgb(138, 135, 135);
+}
+
+.info-container .top .rate .value .fas {
+    padding-right: 6px;
+}
+
+.info-container .top .rate .rating .fas {
+    color: rgb(243, 199, 55);
+}
+
+.info-container .top .rate .your-rating .far {
+    color: rgb(72, 72, 236);
+}
+
+.info-container .top .rate .popularity .fas {
+    color: rgb(33, 175, 33);
+}
+
+.info-container .mid {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.info-container .mid .video {
+    position: relative;
+}
+
+.info-container .mid .image img {
+    height: 500px;
+    width: 330px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.info-container .mid .video #thumbnail {
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.info-container .mid .video #thumbnail .image img {
+    height: 500px;
+    width: 850px;
+}
+
+.info-container .mid .video #thumbnail .overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+.info-container .mid .video #thumbnail .overlay .fas {
+    font-size: 60px;
+    padding-right: 20px;
+}
+
+.info-container .mid .video #thumbnail:hover .overlay .fas {
+    color: rgb(243, 199, 55);
+}
+
+.info-container .mid .video .trailer {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+
+.info-container .genre .details {
+    display: flex;
+    text-decoration: none;
+}
+
+.info-container .genre .details p {
+    font-size: 17px;
+    border: 2px solid rgb(243, 199, 55);
+    padding: 7px 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 19px;
+}
+
+.info-container .details .overview .heading {
+    font-size: 26px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: rgb(243, 199, 55);
+}
+
+.info-container .details .overview .details {
+    font-size: 20px;
+}
+
+.info-container .cast .heading {
+    font-size: 26px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    color: rgb(243, 199, 55);
+}
+
+.info-container .cast .details {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.info-container .cast .details .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-container .cast .details .card .image img {
+    height: 230px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.info-container .cast .details .card .position {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.info-container .cast .details .card .position span {
+    font-size: 14px;
+    color: rgb(206, 203, 203);
+}
+
+.info-container .reviews .heading {
+    padding-top: 30px;
+    font-size: 26px;
+    color: rgb(243, 199, 55);
+    padding-bottom: 10px;
+}
+
+.info-container .reviews #details {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.info-container .reviews #details .card {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    margin-bottom: 45px;
+}
+
+.info-container .reviews #details .avtar img {
+    height: 80px;
+    width: 80px;
+}
+
+.info-container .reviews #details .card .name {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.info-container .reviews #details .card .name span {
+    font-size: 14px;
+    margin-left: 50px;
+}
+
+.info-container .reviews #details .card .review {
+    color: rgb(187, 184, 184);
+}
+
+.info-container .reviews #details .no-review {
+    font-size: 25px;
+    padding-left: 30px;
+    padding-top: 20px;
+    color: rgb(175, 174, 174);
+}
