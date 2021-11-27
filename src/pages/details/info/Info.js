@@ -18,7 +18,8 @@ function Info(props) {
 
     useEffect(() => {
         window.scroll(0, 0);
-    }, []);
+        document.getElementById("thumbnail").style.zIndex = "5";
+    }, [cast]);
 
     useEffect(() => {
         axios
@@ -98,7 +99,7 @@ function Info(props) {
                             src={
                                 Object.entries(x.videos.results).length
                                     ? `https://www.youtube-nocookie.com/embed/${x.videos.results[0].key}`
-                                    : ""
+                                    : "https://www.youtube-nocookie.com/embed/MFUEofAr9GA"
                             }
                             title="YouTube video player"
                             frameBorder="0"
