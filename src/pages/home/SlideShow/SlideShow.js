@@ -16,6 +16,7 @@ function SlideShow() {
     const [show_details, setDetails] = useState([])
     const [load, setLoad] = useState(true)
 
+    let idSlideshow = "576845"
     let shows = []
     let current_show = 0
 
@@ -42,6 +43,8 @@ function SlideShow() {
             let image_url = ""
             image_url = shows[current_show].backdrop_path
             setShow(image_base + image_url)
+            idSlideshow = shows[current_show].id
+            console.log(idSlideshow)
             setShow_1(image_base + shows[(current_show + 1) % 20].backdrop_path)
             setShow_2(image_base + shows[(current_show + 2) % 20].backdrop_path)
             setShow_3(image_base + shows[(current_show + 3) % 20].backdrop_path)
@@ -72,14 +75,16 @@ function SlideShow() {
                         <p className="discription">
                             {show_details.overview}
                         </p>
-                        <Link to={`/show/id=`} >
+                        <Link to={`/show/id=${idSlideshow}`} >
                             <button className="trailer">
                                 <i className="fas fa-play fa-sm"></i> Trailer
                             </button>
                         </Link>
-                        <button className="watchlist">
-                            <i className="fas fa-info-circle"></i>  More Info
-                        </button>
+                        <Link to={`/show/id=${idSlideshow}`} >
+                            <button className="watchlist">
+                                <i className="fas fa-info-circle"></i>  More Info
+                            </button>
+                        </Link>
                     </div>
                     : ""
             }

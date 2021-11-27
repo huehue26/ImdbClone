@@ -10,7 +10,6 @@ import '../search.css'
 
 
 function Page(props) {
-    console.log(props)
 
     const [shows, setShow] = useState([])
     const id = props.id
@@ -23,7 +22,6 @@ function Page(props) {
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${id}&page=${page}&include_adult=false`)
             .then(res => {
                 setShow(res.data.results)
-                console.log(shows)
             })
             .catch(err => {
                 console.log(err)

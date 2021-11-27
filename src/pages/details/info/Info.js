@@ -7,8 +7,6 @@ const image_base = "https://image.tmdb.org/t/p/original/";
 
 function Info(props) {
     var x = props.data;
-    console.log(props);
-    console.log(x.videos);
 
     const [cast, setCast] = useState([]);
     const [reviews, setReview] = useState([]);
@@ -25,7 +23,7 @@ function Info(props) {
     useEffect(() => {
         axios
             .get(
-                `http://api.themoviedb.org/3/movie/${props.data.id}/credits?api_key=${api_key}`
+                `https://api.themoviedb.org/3/movie/${props.data.id}/credits?api_key=${api_key}`
             )
             .then((res) => {
                 setCast(res.data.cast);
