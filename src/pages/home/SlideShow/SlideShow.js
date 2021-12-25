@@ -15,48 +15,76 @@ function SlideShow() {
     const [show_image_next_3, setShow_3] = useState("")
     const [show_details, setDetails] = useState([])
     const [load, setLoad] = useState(true)
+    const [idSlideshow, setIdSlideshow] = useState("576845")
+    const [loaded, setDataLoaded] = useState(false)
+    const [shows, setShows] = useState([])
 
-    let idSlideshow = "576845"
-    let shows = []
     let current_show = 0
 
     useEffect(() => {
         axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}`)
             .then(res => {
-                shows = res.data.results
+                let result_shows = res.data.results
                 // shuffling the shows order
-                for (let i = 0; i < 20; i++) {
+                for (let i = 0; i < 10; i++) {
                     let x = Math.floor(Math.random() * 20)
                     let y = Math.floor(Math.random() * 20)
-                    let z = shows[x]
-                    shows[x] = shows[y]
-                    shows[y] = z
+                    let z = result_shows[x]
+                    result_shows[x] = result_shows[y]
+                    result_shows[y] = z
                 }
+                for (var i = 0; i < result_shows.length; i++) {
+                    shows.push(result_shows[i])
+                }
+                setDataLoaded(true)
+
+                let image_url = ""
+                image_url = shows[current_show].backdrop_path
+                setShow(image_base + image_url)
+                setIdSlideshow(shows[current_show].id)
+                setShow_1(image_base + shows[(current_show + 1) % 20].backdrop_path)
+                setShow_2(image_base + shows[(current_show + 2) % 20].backdrop_path)
+                setShow_3(image_base + shows[(current_show + 3) % 20].backdrop_path)
+                setDetails(shows[current_show])
+                current_show = current_show + 1
+                current_show = current_show % 20
+                setLoad(false)
+
+                const interval = setInterval(() => {
+                    let image_url = ""
+                    image_url = shows[current_show].backdrop_path
+                    setShow(image_base + image_url)
+                    setIdSlideshow(shows[current_show].id)
+                    setShow_1(image_base + shows[(current_show + 1) % 20].backdrop_path)
+                    setShow_2(image_base + shows[(current_show + 2) % 20].backdrop_path)
+                    setShow_3(image_base + shows[(current_show + 3) % 20].backdrop_path)
+                    setDetails(shows[current_show])
+                    current_show = current_show + 1
+                    current_show = current_show % 20
+                }, 15000)
+                return (() => {
+                    clearInterval(interval)
+                })
             })
             .catch(error => {
                 console.log(error)
             })
     }, [])
 
-    useEffect(() => {
-        const interval = setInterval(() => {
+    function upNextSlideshowHandler(x) {
+        if (loaded) {
+            console.log(x)
             let image_url = ""
-            image_url = shows[current_show].backdrop_path
+            image_url = shows[(current_show + x) % 20].backdrop_path
             setShow(image_base + image_url)
-            idSlideshow = shows[current_show].id
-            console.log(idSlideshow)
-            setShow_1(image_base + shows[(current_show + 1) % 20].backdrop_path)
-            setShow_2(image_base + shows[(current_show + 2) % 20].backdrop_path)
-            setShow_3(image_base + shows[(current_show + 3) % 20].backdrop_path)
-            setDetails(shows[current_show])
-            current_show = current_show + 1
-            current_show = current_show % 20
-            setLoad(false)
-        }, 15000)
-        return (() => {
-            clearInterval(interval)
-        })
-    }, [])
+            setIdSlideshow(shows[(current_show + x) % 20].id)
+            setShow_1(image_base + shows[((current_show + x) % 20 + 1) % 20].backdrop_path)
+            setShow_2(image_base + shows[((current_show + x) % 20 + 2) % 20].backdrop_path)
+            setShow_3(image_base + shows[((current_show + x) % 20 + 3) % 20].backdrop_path)
+            setDetails(shows[(current_show + x) % 20])
+            current_show = (current_show + x) % 20
+        }
+    }
 
     return (
         <div className="slideshow">
@@ -92,13 +120,13 @@ function SlideShow() {
                 !load ?
                     <div className="next_shows">
                         <p>Up Next</p>
-                        <div>
+                        <div onClick={() => { upNextSlideshowHandler(1) }}>
                             <img src={show_image_next_1} alt="slideshow_next_image" className="image_next" />
                         </div>
-                        <div>
+                        <div onClick={() => { upNextSlideshowHandler(2) }}>
                             <img src={show_image_next_2} alt="slideshow_next_image" className="image_next" />
                         </div>
-                        <div>
+                        <div onClick={() => { upNextSlideshowHandler(3) }}>
                             <img src={show_image_next_3} alt="slideshow_next_image" className="image_next" />
                         </div>
                     </div>

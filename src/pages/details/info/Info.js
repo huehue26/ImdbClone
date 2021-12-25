@@ -1,15 +1,30 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./info.css";
+import * as language from "./language.json"
 
 const api_key = "5ed54c47c3f64aafc708852433d36e1b";
 const image_base = "https://image.tmdb.org/t/p/original/";
+console.log(language.default)
 
 function Info(props) {
     var x = props.data;
 
     const [cast, setCast] = useState([]);
     const [reviews, setReview] = useState([]);
+    const [language1, setLanguage1] = useState("")
+    const [language2, setLanguage2] = useState("")
+
+    useEffect(() => {
+        console.log(x.original_language)
+        for (var i = 0; i < language.default.length; i++) {
+            if (language.default[i].code == x.original_language) {
+                setLanguage1(language.default[i].name)
+                setLanguage2(language.default[i].nativeName)
+                break
+            }
+        }
+    }, [])
 
     const playVideoHandler = () => {
         document.getElementById("thumbnail").style.zIndex = "1";
@@ -53,7 +68,10 @@ function Info(props) {
                     </div>
                     <div className="release">
                         {x.release_date ? x.release_date : "0000-00-00"}
-                        <span>{x.original_language ? x.original_language : ""}</span>
+                        <span>
+                            {x.original_language ? language1 : ""} &nbsp;||&nbsp;
+                            {x.original_language ? language2 : ""}
+                        </span>
                     </div>
                 </div>
                 <div className="rate">
