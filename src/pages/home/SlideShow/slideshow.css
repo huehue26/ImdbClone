@@ -52,7 +52,7 @@
     flex-direction: column;
     position: absolute;
     top: 130px;
-    left: 1100px;
+    right: 4vw;
 }
 
 .slideshow .next_shows p {
@@ -66,4 +66,43 @@
     margin-bottom: 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .slideshow .details {
+        font-size: 17px;
+    }
+
+    .slideshow .details .title {
+        font-size: 22px;
+    }
+
+    .slideshow .details button {
+        font-size: 15px;
+        padding: 7px 11px 7px 11px;
+    }
+
+    .slideshow .next_shows {
+        top: 50px;
+    }
+
+    .slideshow .next_shows p {
+        font-size: 20px;
+    }
+
+    .slideshow .next_shows .image_next {
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slideshow .next_shows {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .slideshow .details {
+        display: none;
+    }
 }

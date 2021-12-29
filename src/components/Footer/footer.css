@@ -87,3 +87,24 @@ footer p {
 footer .main .cc {
     font-size: 13px;
 }
+
+@media screen and (max-width: 700px) {
+    footer {
+        font-size: 10px;
+    }
+
+    footer .main {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer .first {
+        display: none;
+    }
+
+    footer .second {
+        display: none;
+    }
+
+}

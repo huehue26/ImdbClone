@@ -98,7 +98,7 @@ function Info(props) {
                 </div>
             </div>
             <div className="mid">
-                <div className="image">
+                <div className="image poster">
                     <img src={`${image_base}${x.poster_path}`} alt="poster" />
                 </div>
                 <div className="video">

@@ -21,6 +21,21 @@ function SlideShow() {
 
     let current_show = 0
 
+    function upNextSlideshowHandler(x) {
+        if (loaded) {
+            console.log(x)
+            let image_url = ""
+            image_url = shows[(current_show + x) % 20].backdrop_path
+            setShow(image_base + image_url)
+            setIdSlideshow(shows[(current_show + x) % 20].id)
+            setShow_1(image_base + shows[((current_show + x) % 20 + 1) % 20].backdrop_path)
+            setShow_2(image_base + shows[((current_show + x) % 20 + 2) % 20].backdrop_path)
+            setShow_3(image_base + shows[((current_show + x) % 20 + 3) % 20].backdrop_path)
+            setDetails(shows[(current_show + x) % 20])
+            current_show = (current_show + x) % 20
+        }
+    }
+
     useEffect(() => {
         axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}`)
             .then(res => {
@@ -70,21 +85,6 @@ function SlideShow() {
                 console.log(error)
             })
     }, [])
-
-    function upNextSlideshowHandler(x) {
-        if (loaded) {
-            console.log(x)
-            let image_url = ""
-            image_url = shows[(current_show + x) % 20].backdrop_path
-            setShow(image_base + image_url)
-            setIdSlideshow(shows[(current_show + x) % 20].id)
-            setShow_1(image_base + shows[((current_show + x) % 20 + 1) % 20].backdrop_path)
-            setShow_2(image_base + shows[((current_show + x) % 20 + 2) % 20].backdrop_path)
-            setShow_3(image_base + shows[((current_show + x) % 20 + 3) % 20].backdrop_path)
-            setDetails(shows[(current_show + x) % 20])
-            current_show = (current_show + x) % 20
-        }
-    }
 
     return (
         <div className="slideshow">

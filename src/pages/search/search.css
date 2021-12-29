@@ -63,3 +63,100 @@
 .search-items .scroll-carousel-items .details .rating div button:hover {
     background-color: rgb(73, 72, 72);
 }
+
+@media screen and (max-width: 1100px) {
+    .search-items {
+        margin-left: 40px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .search-items {
+        margin-left: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .search-items {
+        margin-left: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .search-items .scroll-carousel-items {
+        height: 290px;
+        width: 140px;
+        margin-right: 10px;
+    }
+
+    .search-items .scroll-carousel-items .image img {
+        height: 210px;
+        width: 140px;
+    }
+
+    .search-items .scroll-carousel-items .details {
+        font-size: 14px;
+    }
+
+    .search-items .scroll-carousel-items .details .rating .fas {
+        font-size: 12px;
+    }
+
+    .search-items .scroll-carousel-items .details .rating div {
+        font-size: 15px;
+        margin: 6px 6px;
+    }
+
+    .search-items .scroll-carousel-items .details .rating div button {
+        margin-left: 40px;
+        height: 20px;
+        width: 30px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .search-items {
+        margin-left: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .search-items {
+        margin-left: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .search-items .scroll-carousel-items {
+        height: 260px;
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    .search-items .scroll-carousel-items .image img {
+        height: 190px;
+        width: 120px;
+    }
+
+    .search-items .scroll-carousel-items .details {
+        font-size: 13px;
+    }
+
+    .search-items .scroll-carousel-items .details .rating .fas {
+        font-size: 10px;
+    }
+
+    .search-items .scroll-carousel-items .details .rating div {
+        font-size: 12px;
+        margin: 6px 6px;
+    }
+
+    .search-items .scroll-carousel-items .details .rating div button {
+        margin-left: 30px;
+        height: 20px;
+        width: 30px;
+        font-size: 13px;
+    }
+}

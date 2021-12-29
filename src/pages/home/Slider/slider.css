@@ -81,3 +81,42 @@
 .category .items .scroll-carousel-items .details .rating div button:hover {
     background-color: rgb(73, 72, 72);
 }
+
+@media screen and (max-width: 500px) {
+    .category-sub-heading {
+        font-size: 18px;
+    }
+
+    .category-sub-sub-heading {
+        font-size: 15px;
+    }
+
+    .category .items .scroll-carousel-items {
+        height: 300px;
+        width: 140px;
+    }
+
+    .category .items .scroll-carousel-items .image img {
+        height: 210px;
+    }
+
+    .category .items .scroll-carousel-items .details {
+        font-size: 14px;
+    }
+
+    .category .items .scroll-carousel-items .details .rating .fas {
+        font-size: 12px;
+    }
+
+    .category .items .scroll-carousel-items .details .rating div {
+        font-size: 15px;
+        margin: 6px 6px;
+    }
+
+    .category .items .scroll-carousel-items .details .rating div button {
+        margin-left: 40px;
+        height: 20px;
+        width: 30px;
+        font-size: 13px;
+    }
+}

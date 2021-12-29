@@ -238,3 +238,137 @@
     padding-top: 20px;
     color: rgb(175, 174, 174);
 }
+
+@media screen and (max-width: 1200px) {
+    .info-container {
+        width: 94vw;
+        margin-left: 3vw;
+    }
+
+    .info-container .mid .image img {
+        height: 430px;
+        width: 300px;
+    }
+
+    .info-container .mid .video .trailer iframe {
+        width: 700px;
+        height: 430px;
+    }
+
+    .info-container .mid .video #thumbnail .image img {
+        width: 700px;
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .info-container {
+        width: 94vw;
+        margin-left: 3vw;
+    }
+
+    .info-container .mid .image img {
+        height: 380px;
+        width: 280px;
+    }
+
+    .info-container .mid .video .trailer iframe {
+        width: 650px;
+        height: 380px;
+    }
+
+    .info-container .mid .video #thumbnail .image img {
+        width: 650px;
+        height: 380px;
+    }
+
+    .info-container .top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .info-container .mid .poster {
+        display: none;
+    }
+
+    .info-container .mid .video .trailer iframe {
+        width: 94vw;
+        height: 35vh;
+    }
+
+    .info-container .mid .video #thumbnail .image img {
+        width: 94vw;
+        height: 35vh;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .info-container .top {
+        grid-template-columns: 1fr;
+    }
+
+    .info-container .top .name .heading {
+        font-size: 27px;
+    }
+
+    .info-container .top .name .release span {
+        font-size: 20px;
+    }
+
+    .info-container .top .rate {
+        margin-top: 20px;
+    }
+
+    .info-container .top .rate .value {
+        font-size: 16px;
+    }
+
+    .info-container .details .overview .heading {
+        font-size: 20px;
+        padding-top: 13px;
+    }
+
+    .info-container .details .overview .details {
+        font-size: 16px;
+    }
+
+    .info-container .cast .heading {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .info-container .cast .details .card .image img {
+        height: 180px;
+        width: 160px;
+    }
+
+    .info-container .cast .details .card .position {
+        font-size: 14px;
+    }
+
+    .info-container .cast .details .card .position span {
+        font-size: 12px;
+    }
+
+    .info-container .mid .video #thumbnail .overlay {
+        font-size: 23px;
+    }
+
+    .info-container .mid .video #thumbnail .overlay .fas {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .info-container .mid .video .trailer iframe {
+        width: 94vw;
+        height: 25vh;
+    }
+
+    .info-container .mid .video #thumbnail .image img {
+        width: 94vw;
+        height: 25vh;
+    }
+}

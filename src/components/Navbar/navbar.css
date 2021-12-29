@@ -95,3 +95,43 @@
 #nav-bar .btn-1:hover {
     color: rgba(245, 178, 53, 0.9);
 }
+
+@media screen and (max-width: 1100px) {
+    #nav-bar .search {
+        width: 450px;
+    }
+
+    #nav-bar #form button {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #nav-bar .search {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #nav-bar .menu {
+        display: none;
+    }
+
+    #nav-bar #form button {
+        display: none;
+    }
+
+    #nav-bar .btn-1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #nav-bar .search {
+        width: 250px;
+    }
+
+    #nav-bar .logo {
+        padding-right: 10px;
+    }
+}
